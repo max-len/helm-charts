@@ -48,7 +48,7 @@ template: |
       vmware_storage_profile = {{ .Values.backends.standard_hdd.vmware_storage_profile }}
       extra_capabilities = '{"vcenter-shard": "{= host.split(".")[0] =}"}'
 
-      {{- range $backend, $kvs := .Values.backends.additional_backends }}
+      {{ range $backend, $kvs := .Values.backends.additional_backends }}
       [{{ $backend }}]
       {{- range $key, $value := $kvs }}
       {{ $key }} = {{ $value }}
