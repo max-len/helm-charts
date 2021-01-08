@@ -113,7 +113,7 @@ spec:
           containerPort: {{.Values.api_port_internal}}
         volumeMounts:
         - name: swift-buffer
-          mountPath: /etc/glance
+          mountPath: /upload
         - name: etcglance
           mountPath: /etc/glance
         - name: glance-etc
